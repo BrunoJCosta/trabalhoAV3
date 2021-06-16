@@ -7,7 +7,7 @@ defmodule Pfu.Repo.Migrations.CreatePosts do
       add :likes_count, :integer
       add :reposts_count, :integer
       add :nota, :integer
-      add :user_id, references(:tipo_user, on_delete: :delete_all), null: false
+      add :user_id, references(:users, on_delete: :delete_all), null: false
 
       timestamps()
     end

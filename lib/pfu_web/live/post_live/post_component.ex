@@ -30,7 +30,7 @@ defmodule PfuWeb.PostLive.PostComponent do
               </a>
             </div>
             <div class="column">
-            <%= if @current_tipo_user.is_professor do %>
+            <%= if @current_user.tipo in [:PROFESSOR] do %>
               <a href="#" phx-click="notas" phx-target="<%= @myself %>">
               <i class="fas fa-star"></i><%= @post.nota %>
               </a>

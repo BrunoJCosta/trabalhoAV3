@@ -51,6 +51,7 @@ defmodule PfuWeb.PostLive.Index do
     socket
     |> assign(:page_title, "New Post")
     |> assign(:post, %Post{user_id: socket.assigns.current_user.id})
+
   end
 
   defp apply_action(socket, :index, _params) do
