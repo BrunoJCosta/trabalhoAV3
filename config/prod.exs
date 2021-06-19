@@ -10,7 +10,9 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :pfu, PfuWeb.Endpoint,
-  url: [scheme: "https", host: "https://git.heroku.com/trabalhoav3.git", port: 443],
+  http: [port: [:system, "PORT"]],
+  url: [scheme: "https", host: "rocky-depths-40660.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
